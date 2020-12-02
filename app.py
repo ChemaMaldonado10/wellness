@@ -7,19 +7,18 @@ import json
 import mysql.connector
 import csv
 
+# Our app name.
+api = Flask(__name__)
+
 # Cache configuration
 
 # In this hypothetical case of cache use we set a timeout for 5 minutes
 # so we can storage some data in that amount of time for a quick use.
-
 config = {
     "DEBUG": False,
     "CACHE_TYPE": "simple",
     "CACHE_DEFAULT_TIMEOUT": 300
 }
-
-# Our app name.
-api = Flask(__name__)
 
 cache = Cache(api)
 
@@ -30,7 +29,6 @@ mydb = mysql.connector.connect(
       password="ddbb")
 
 # JWT configuration for Login Auth.
-
 api.config['JWT_SECRET_KEY'] = 'secret_seed'
 jwt = JWTManager(api)
 
@@ -43,12 +41,14 @@ def import_csv():
 
     mycursor = mydb.cursor()
 
+    # Create database and table.
     mycursor.execute("DROP DATABASE IF EXISTS example")
     mycursor.execute("CREATE DATABASE example")
     mycursor.execute("USE example")
 
     mycursor.execute("CREATE TABLE stats (date VARCHAR(20), energy DECIMAL(24,5), reactive_energy DECIMAL(24,5), power DECIMAL(24,5), maximeter DECIMAL(24,5), reactive_power DECIMAL(24,5), voltage DECIMAL(24,5), intensity DECIMAL(24,5), power_factor DECIMAL(24,5));")
 
+    # Importing csv data.
     with open("csv_data/report.csv", mode='r') as csv_data:
         reader = csv.reader(csv_data, delimiter=',')
         next(reader)
