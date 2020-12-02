@@ -38,15 +38,10 @@ Como parte opcional de esta prueba se ha implementado:
     Sería interesante realizar algún test de conexión con base de datos ya que ésta es la acción que más se repite.
 
 
-La realización de esta prueba se ha llevado a cabo en un droplet de digital ocean por lo tanto se puede realizar un test de cada uno de los endpoints
-en remoto mediante las urls que se exponen a continuación (se recomienda el uso de postman):
+(Se adjuntan imágenes de los resultados obtenidos de cada uno de los endpoints.)
 
-    - http://138.68.90.90/import_csv      [GET]
-    - http://138.68.90.90/data_example    [GET]
-    - http://138.68.90.90/graph_example   [GET]
 
-    - http://138.68.90.90/login           [POST] [email, password]
-    - http://138.68.90.90/cache_example   [GET]
+
 
 
 
