@@ -38,7 +38,7 @@ Como parte opcional de esta prueba se ha implementado:
     Sería interesante realizar algún test de conexión con base de datos ya que ésta es la acción que más se repite.
 
 
-(Se adjuntan imágenes de los resultados obtenidos de cada uno de los endpoints.)
+(Se adjuntan imágenes de los resultados obtenidos de cada uno de los endpoints en la carpeta img.)
 
 
 
