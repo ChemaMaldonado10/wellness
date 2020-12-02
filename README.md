@@ -1,6 +1,6 @@
 PRUEBA TÉCNICA - BACKEND - WELLNESS.
 
-Se ha desarrollado una API en el microframework Flask.
+Se ha desarrollado una API en el microframework Flask para la base de datos se ha usado MariaDB (se puede instalar siguiendo los pasos de este enlace: https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04-es) 
 
 Como parte obligatoria de esta prueba se ha implementado:
 
